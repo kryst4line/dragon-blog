@@ -1,4 +1,6 @@
 // Reading time interface
+import type { CollectionEntry } from 'astro:content'
+
 export interface ReadingTime {
   text: string
   minutes: number
@@ -16,5 +18,15 @@ export interface TOCItem {
 
 // PostList component props interface
 export interface PostListProps {
+  posts: CollectionEntry<'posts'>[]
+}
+
+// PostList component props interface
+export interface GroupedPostListProps {
+  groupedPosts: YearGroupedPosts[]
+}
+
+export interface YearGroupedPosts {
+  year: number,
   posts: CollectionEntry<'posts'>[]
 }
