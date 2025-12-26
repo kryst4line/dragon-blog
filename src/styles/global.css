@@ -213,3 +213,10 @@ main {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+a:not([href*="dragon.gal"]):not([href^="#"]):not([href^="/"]):not(.no-icon)::after {
+  content: '\2197'; /* Code for ↗ */
+  display: inline-block;
+  margin-left: 0.1em;
+  font-size: 0.9em;
+}

@@ -16,7 +16,7 @@ const { groupedPosts } = Astro.props as GroupedPostListProps;
         {posts && (
           posts.map((post) => (
             <li>
-              <a href={`/${post.id}/`}>
+              <a href={`/${post.id}/`} title={post.data.title}>
                 <div class={`post-item ${!themeConfig.date.dateOnRight ? 'date-left' : ''}`}>
                   {!themeConfig.date.dateOnRight && (
                     <p class="date font-features">
@@ -72,6 +72,10 @@ const { groupedPosts } = Astro.props as GroupedPostListProps;
     display: block;
     text-decoration: none;
     transition: opacity 0.15s ease-out;
+  }
+
+  a:visited {
+    color: gray;
   }
 
   @media (hover: hover) and (pointer: fine) {

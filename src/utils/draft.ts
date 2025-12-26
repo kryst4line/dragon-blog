@@ -33,3 +33,13 @@ export async function getGroupedSortedFilteredPosts(): Promise<YearGroupedPosts[
   });
   return years;
 }
+
+export async function getStatus(): Promise<any[]> {
+  const posts = await fetch(
+    'https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?limit=10&q=from%3Adragon.gal+%23microblog'
+  )
+    .then((response) => response.json())
+    .then((json) => json.posts)
+  return posts;
+}
+

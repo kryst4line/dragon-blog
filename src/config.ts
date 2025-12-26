@@ -6,6 +6,7 @@ export const themeConfig: ThemeConfig = {
     website: 'https://dragon.gal/', // Site domain
     title: 'krystaline\'s lair', // Site title
     author: 'kryst4line', // Author name
+    email: 'hello@dragon.gal',
     description: 'afterthoughts from a dumb dragoness', // Site description
     language: 'en-US' // Default language
   },
@@ -14,7 +15,7 @@ export const themeConfig: ThemeConfig = {
   general: {
     contentWidth: '35rem', // Content area width
     centeredLayout: true, // Use centered layout (false for left-aligned)
-    themeToggle: true, // Show theme toggle button (uses system theme by default)
+    themeToggle: false, // Show theme toggle button (uses system theme by default)
     postListDottedDivider: false, // Show dotted divider in post list
     footer: true, // Show footer
     fadeAnimation: true // Enable fade animations

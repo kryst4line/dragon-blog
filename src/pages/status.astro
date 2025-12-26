@@ -1,0 +1,26 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import { themeConfig } from '@/config'
+import { getStatus } from '@/utils/draft'
+
+const bskyPosts = await getStatus();
+
+---
+<IndexLayout title={'status — ' + themeConfig.site.title} description={themeConfig.site.description}>
+  <ul>
+    {bskyPosts.map(post => (
+      <li>{post.record.text}</li>
+    ))}
+  </ul>
+</IndexLayout>
+
+<style>
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+</style>
