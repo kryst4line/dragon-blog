@@ -14,10 +14,11 @@ import remarkTOC from './src/plugins/remark-toc.mjs'
 import { themeConfig } from './src/config'
 import { imageConfig } from './src/utils/image-config'
 import path from 'path'
+import yeskunallumami from '@yeskunall/astro-umami';
 // import netlify from '@astrojs/netlify'
 
 export default defineConfig({
-//   adapter: netlify(), // Set adapter for deployment, or set `linkCard` to `false` in `src/config.ts`
+  // adapter: netlify(), // Set adapter for deployment, or set `linkCard` to `false` in `src/config.ts`
   site: themeConfig.site.website,
   image: {
     service: {
@@ -38,7 +39,12 @@ export default defineConfig({
       Exclude: [(file) => file.toLowerCase().includes('katex')]
     }),
     mdx(),
-    sitemap()
+    sitemap(),
+    yeskunallumami({
+      id: '2a6d6287-4a97-4f02-b561-73397d500ba0',
+      endpointUrl: 'https://umami.dragon.gal/api/umami',
+      trackerScriptName: 'umami.js'
+    })
   ],
   vite: {
     resolve: {
