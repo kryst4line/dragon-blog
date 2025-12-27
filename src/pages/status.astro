@@ -6,7 +6,7 @@ import { getStatus } from '@/utils/draft'
 const bskyPosts = await getStatus();
 
 ---
-<IndexLayout title={'status — ' + themeConfig.site.title} description={themeConfig.site.description}>
+<IndexLayout title={'status | ' + themeConfig.site.title} description={themeConfig.site.description}>
   <ul>
     {bskyPosts.map(post => (
       <li>{post.record.text}</li>

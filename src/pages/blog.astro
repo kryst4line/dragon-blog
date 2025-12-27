@@ -9,6 +9,6 @@ import GroupedPostList from '@/components/widgets/GroupedPostList.astro'
 const groupedPosts = await getGroupedSortedFilteredPosts();
 
 ---
-<IndexLayout title={'blog — ' + themeConfig.site.title} description={themeConfig.site.description}>
+<IndexLayout title={'blog | ' + themeConfig.site.title} description={themeConfig.site.description}>
   <GroupedPostList groupedPosts={groupedPosts} />
 </IndexLayout>
