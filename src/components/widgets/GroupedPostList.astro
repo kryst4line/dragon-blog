@@ -101,7 +101,9 @@ const { groupedPosts } = Astro.props as GroupedPostListProps;
   }
 
   .post-item {
-    height: 2.75rem;
+    box-sizing: border-box;
+    min-height: 2.75rem;
+    padding: 0.5em 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,7 +127,7 @@ const { groupedPosts } = Astro.props as GroupedPostListProps;
     margin: 0;
     flex-shrink: 1;
     min-width: 0;
-    white-space: nowrap;
+    white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -143,7 +145,7 @@ const { groupedPosts } = Astro.props as GroupedPostListProps;
     flex: 1 1 auto;
     min-width: 3rem;
     margin: 0 0.25rem;
-    height: 0.5px;
+    height: 1px;
     background-color: var(--border);
   }
 
