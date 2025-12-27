@@ -25,4 +25,4 @@ content:
           collapsible: false
       - name: body
         label: Body
-        type: string
+        type: code
