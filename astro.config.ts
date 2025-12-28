@@ -42,8 +42,8 @@ export default defineConfig({
     sitemap(),
     yeskunallumami({
       id: '2a6d6287-4a97-4f02-b561-73397d500ba0',
-      endpointUrl: 'https://umami.dragon.gal/api/umami',
-      trackerScriptName: 'umami.js'
+      endpointUrl: 'https://umami.dragon.gal/api/x',
+      trackerScriptName: 'x.js'
     })
   ],
   vite: {
